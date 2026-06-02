@@ -4,6 +4,8 @@ import type { SiteConfig, MenuCategory } from './types'
 import Header from './components/Header'
 import MenuSection from './components/MenuSection'
 import CallButton from './components/CallButton'
+import Historia from './components/Historia'
+import Footer from './components/Footer'
 
 export default function App() {
   const [config, setConfig] = useState<SiteConfig | null>(null)
@@ -48,11 +50,13 @@ export default function App() {
   return (
     <div className="max-w-lg mx-auto pb-28">
       <Header config={config} />
-      <main>
+      <Historia />
+      <main className="bg-[#fffdf9]">
         {menu.map((category) => (
           <MenuSection key={category.name} category={category} />
         ))}
       </main>
+      <Footer />
       <CallButton phoneNumber={config.phoneNumber} />
     </div>
   )
