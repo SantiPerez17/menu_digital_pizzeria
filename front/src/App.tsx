@@ -28,17 +28,17 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <p className="text-stone-400 text-sm animate-pulse">Cargando menú...</p>
+      <div className="flex items-center justify-center min-h-screen" style={{ background: 'var(--bg-page)' }}>
+        <p className="text-sm animate-pulse" style={{ color: 'var(--text-muted)' }}>Cargando menú...</p>
       </div>
     )
   }
 
   if (error || !config) {
     return (
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen" style={{ background: 'var(--bg-page)' }}>
         <div className="flex-1 flex items-center justify-center px-5">
-          <p className="text-stone-500 text-sm text-center">
+          <p className="text-sm text-center" style={{ color: 'var(--text-muted)' }}>
             No se pudo cargar el menú. Intentá de nuevo más tarde.
           </p>
         </div>
@@ -48,15 +48,16 @@ export default function App() {
   }
 
   return (
-    <div className="max-w-lg mx-auto pb-28 min-h-screen shadow-2xl shadow-black/50">
+    <div className="max-w-lg mx-auto min-h-screen shadow-2xl shadow-black/40">
       <Header config={config} />
       <Historia />
-      <main className="bg-[#fffdf9]">
+      <main style={{ background: 'var(--bg-main)' }} className="pb-4">
         {menu.map((category) => (
           <MenuSection key={category.name} category={category} />
         ))}
       </main>
       <Footer />
+      <div className="pb-28" style={{ background: 'var(--bg-dark)' }} />
       <CallButton phoneNumber={config.phoneNumber} />
     </div>
   )
