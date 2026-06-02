@@ -48,7 +48,7 @@ export default function App() {
   }
 
   return (
-    <div className="max-w-lg mx-auto pb-28">
+    <div className="max-w-lg mx-auto pb-28 min-h-screen shadow-2xl shadow-black/50">
       <Header config={config} />
       <Historia />
       <main className="bg-[#fffdf9]">
