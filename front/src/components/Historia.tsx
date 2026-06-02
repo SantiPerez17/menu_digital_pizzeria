@@ -4,25 +4,25 @@ export default function Historia() {
   const [open, setOpen] = useState(false)
 
   return (
-    <section className="px-5 py-8 bg-stone-900 text-stone-100">
+    <section className="px-5 py-8" style={{ background: 'var(--bg-hero)' }}>
       <div className="max-w-sm mx-auto text-center">
-        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#c1440e] mb-3">
+        <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: 'var(--accent)' }}>
           Desde 1987
         </p>
-        <h2 className="font-display text-2xl font-bold mb-4">
+        <h2 className="font-display text-2xl font-bold mb-4" style={{ color: 'var(--text-hero)' }}>
           Nuestra Historia
         </h2>
 
         {open && (
-          <div className="text-sm text-stone-400 leading-relaxed text-left space-y-3 mb-5">
+          <div className="text-sm leading-relaxed text-left space-y-3 mb-5" style={{ color: 'var(--text-hero-muted)' }}>
             <p>
-              Todo comenzó en un pequeño horno de barro en el barrio de Palermo. Don Vittorio
-              Rossi llegó desde Nápoles con una sola maleta y la receta familiar que su madre
+              Todo comenzó en un pequeño horno de barro en el barrio de Palermo. Enzo Ferrara
+              llegó desde Nápoles con una sola maleta y la receta familiar que su madre
               le enseñó de niño: masa fermentada 48 horas, salsa de tomate San Marzano y
               mozzarella fior di latte.
             </p>
             <p>
-              Desde entonces, tres generaciones de la familia Rossi mantienen viva esa
+              Desde entonces, tres generaciones de la familia Ferrara mantienen viva esa
               tradición. Cada pizza se trabaja a mano, se hornea en horno a leña y se sirve
               con el mismo amor de siempre.
             </p>
@@ -35,7 +35,8 @@ export default function Historia() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-stone-600 text-sm font-medium text-stone-300 hover:border-[#c1440e] hover:text-[#c1440e] transition-colors"
+          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border text-sm font-medium transition-colors"
+          style={{ borderColor: 'var(--border-main)', color: 'var(--text-hero-muted)' }}
         >
           {open ? 'Cerrar' : 'Leer nuestra historia'}
           <span className={`transition-transform ${open ? 'rotate-180' : ''}`}>▾</span>

@@ -1,34 +1,32 @@
 @import "tailwindcss";
 
 @layer base {
+  /* dark mode (default) */
   :root {
     --bg-page: #1c1917;
-    --bg-main: #fffdf9;
-    --bg-dark: #1c1917;
-    --bg-dark-2: #292524;
-    --text-main: #1c1917;
-    --text-muted: #78716c;
-    --text-light: #a8a29e;
-    --text-on-dark: #f5f5f4;
-    --text-on-dark-muted: #a8a29e;
-    --border-main: #e7e5e4;
-    --border-dark: #44403c;
+    --bg-main: #221f1e;
+    --bg-hero: #141211;
+    --text-main: #f5f0eb;
+    --text-muted: #a8a29e;
+    --text-light: #78716c;
+    --text-hero: #f5f0eb;
+    --text-hero-muted: #a8a29e;
+    --border-main: #3c3734;
     --accent: #c1440e;
   }
 
+  /* light mode */
   @media (prefers-color-scheme: light) {
     :root {
-      --bg-page: #f5f5f4;
+      --bg-page: #f0ece6;
       --bg-main: #fffdf9;
-      --bg-dark: #1c1917;
-      --bg-dark-2: #292524;
+      --bg-hero: #fffdf9;
       --text-main: #1c1917;
       --text-muted: #78716c;
       --text-light: #a8a29e;
-      --text-on-dark: #f5f5f4;
-      --text-on-dark-muted: #a8a29e;
+      --text-hero: #1c1917;
+      --text-hero-muted: #78716c;
       --border-main: #e7e5e4;
-      --border-dark: #44403c;
       --accent: #c1440e;
     }
   }
