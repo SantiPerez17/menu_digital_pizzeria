@@ -99,9 +99,9 @@ cd ../sanity/menu-pizzeria && npm install
 Crear `front/.env.local`:
 
 ```env
-VITE_SANITY_PROJECT_ID=fpf8d751
+VITE_SANITY_PROJECT_ID=xxxxxxxx
 VITE_SANITY_DATASET=production
-VITE_SANITY_API_VERSION=2024-01-01
+VITE_SANITY_API_VERSION=2026-01-01
 VITE_PHONE_NUMBER=+54XXXXXXXXXX
 ```
 
@@ -147,8 +147,8 @@ Deploy gratuito, integración directa con GitHub (CI/CD automático), y permite 
 ## Autor
 
 **Santiago Perez**
-Desarrollador web freelance — React · TypeScript · Python
-🔗 [tu-portfolio.com](#) · [LinkedIn](#) · [GitHub](https://github.com/SantiPerez17)
+
+🔗 [GitHub](https://github.com/SantiPerez17)
 
 ---
 
